@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Solicitação</title>
+    <link rel="stylesheet" href="../inicial/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Nova Solicitação</h1>
+        <nav>
+            <a href="../painel/index.html">Painel Principal</a>
+            <a href="index.html" class="active">Nova Solicitação</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="form-solicitacao">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Digite o título" required />
+
+            <label for="rede">Rede:</label>
+            <input type="text" id="rede" name="rede" placeholder="Informe a rede" required />
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" placeholder="Digite a descrição" required></textarea>
+
+            <label for="relevancia">Relevância:</label>
+            <select id="relevancia" name="relevancia" required>
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+            </select>
+
+            <label for="prazo">Prazo (opcional):</label>
+            <input type="date" id="prazo" name="prazo" />
+
+            <button type="submit">Adicionar Solicitação</button>
+        </form>
+    </main>
+
+    <!-- Modal de Sucesso -->
+    <div class="modal" id="modal-sucesso">
+        <div class="modal-content">
+            <span id="fechar-modal" class="fechar">&times;</span>
+            <p>Solicitação cadastrada com sucesso!</p>
+            <button id="btn-ok">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

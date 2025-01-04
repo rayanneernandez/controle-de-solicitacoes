@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Principal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+      <h1>Painel de Solicitações</h1>
+      <nav>
+        <a href="index.html">Página Inicial</a>
+        <a href="../inicial/index.html">Nova Solicitação</a>
+      </nav>
+    </header>
+    <main>
+      <div class="search-container">
+        <input type="text" id="pesquisa" placeholder="Pesquisar solicitações..." oninput="pesquisarSolicitacoes()">
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Descrição</th>
+            <th>Rede</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="lista-solicitacoes">
+          <!-- Linhas geradas dinamicamente aqui -->
+        </tbody>
+      </table>
+    </main>
+  
+    <div id="modal">
+      <div id="modal-content">
+        <h3>Detalhes da Solicitação</h3>
+        <p><strong>Título:</strong> <span id="modal-titulo"></span></p>
+        <p><strong>Descrição:</strong> <span id="modal-descricao"></span></p>
+        <p><strong>Rede:</strong> <span id="modal-rede"></span></p>
+        <p><strong>Status:</strong> <span id="modal-status"></span></p>
+        <button id="modal-close" onclick="fecharModal()">Fechar</button>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
