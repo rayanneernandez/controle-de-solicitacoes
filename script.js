@@ -48,7 +48,7 @@ form.addEventListener('submit', function (event) {
 // Fecha o modal ao clicar no botão OK
 btnOk.addEventListener('click', function () {
     modal.style.display = 'none';
-    window.location.href = '../painel/index.html'; // Redireciona para o painel principal
+    window.location.href = 'painel.html'; // Redireciona para o painel principal
 });
 
 // Fecha o modal ao clicar no botão de fechar
